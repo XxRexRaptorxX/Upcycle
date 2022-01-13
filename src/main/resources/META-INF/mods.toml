@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[38,)"
+license="All rights reserved"
+issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/upcycle/issues"
+
+[[mods]]
+modId="upcycle"
+version="1.0.0"
+displayName="Upcycle!"
+itemIcon="minecraft:composter"
+updateJSONURL="https://raw.githubusercontent.com/XxRexRaptorxX/Update-Checker/main/Upcycle.json"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/upcycle"
+logoFile="logo.png"
+#credits=""
+authors="XxRexRaptorxX (RexRaptor)"
+description='''
+This mod allows you to upcycle trash like rotten flesh and spider eyes in the composter to bone meal!
+'''
+
+[[dependencies.upcycle]]
+    modId="forge"
+    mandatory=true
+    versionRange="[38,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.upcycle]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18,1.19)"
+    ordering="NONE"
+    side="BOTH"
