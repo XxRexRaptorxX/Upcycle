@@ -1,6 +1,5 @@
 package xxrexraptorxx.upcycle.utils;
 
-import net.minecraft.world.item.Items;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -8,8 +7,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Mod.EventBusSubscriber
@@ -50,6 +47,8 @@ public class Config {
 
         builder.comment("General").push(CATEGORY_GENERAL);
         UPCYCLE_CHANCE = builder.comment("The chance for an item to add a level of compost").defineInRange("upcycle_chance", 0.3F, 0.1F, 1.0F);
+
+        /** TODO
         COMPOSTABLE_ITEMS = builder.comment("A list with all compostable items [modid:item]").define("compostable_items", new ArrayList<>(Arrays.asList(
                 Items.ROTTEN_FLESH.getRegistryName().toString(),
                 Items.SPIDER_EYE.getRegistryName().toString(),
@@ -57,7 +56,7 @@ public class Config {
                 Items.POISONOUS_POTATO.getRegistryName().toString(),
                 Items.RABBIT_FOOT.getRegistryName().toString()
         )));
-
+        **/
         builder.pop();
 
         COMMON_CONFIG = builder.build();

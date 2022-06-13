@@ -1,13 +1,9 @@
 package xxrexraptorxx.upcycle.main;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xxrexraptorxx.upcycle.utils.Config;
@@ -23,8 +19,14 @@ public class Upcycle {
 
     public Upcycle() {
         Config.init();
-        MinecraftForge.EVENT_BUS.register(this);
 
+        ComposterBlock.COMPOSTABLES.put(Items.ROTTEN_FLESH, 0.3F);
+        ComposterBlock.COMPOSTABLES.put(Items.SPIDER_EYE, 0.3F);
+        ComposterBlock.COMPOSTABLES.put(Items.FERMENTED_SPIDER_EYE, 0.3F);
+        ComposterBlock.COMPOSTABLES.put(Items.POISONOUS_POTATO, 0.3F);
+        ComposterBlock.COMPOSTABLES.put(Items.RABBIT_FOOT, 0.65F);
+
+        /**         //TODO: not working?
         try {
             for (String item : Config.COMPOSTABLE_ITEMS.get()) {
                 ComposterBlock.COMPOSTABLES.put(ForgeRegistries.ITEMS.getValue(
@@ -34,7 +36,8 @@ public class Upcycle {
         } catch (Exception e) {
             LOGGER.error("[Upcycle] Invalid Compostable Item.");
         }
+         **/
+
+        MinecraftForge.EVENT_BUS.register(this);
     }
-
-
 }
