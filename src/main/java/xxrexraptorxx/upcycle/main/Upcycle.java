@@ -2,8 +2,7 @@ package xxrexraptorxx.upcycle.main;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.ComposterBlock;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xxrexraptorxx.upcycle.utils.Config;
@@ -37,7 +36,5 @@ public class Upcycle {
             LOGGER.error("[Upcycle] Invalid Compostable Item.");
         }
          **/
-
-        MinecraftForge.EVENT_BUS.register(this);
     }
 }
