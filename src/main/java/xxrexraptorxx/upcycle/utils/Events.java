@@ -33,8 +33,6 @@ import java.util.Scanner;
 public class Events {
 
 
-
-
     /** Update-Checker **/
     private static boolean hasShownUp = false;
 
