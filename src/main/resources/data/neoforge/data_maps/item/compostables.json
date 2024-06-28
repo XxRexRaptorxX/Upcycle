@@ -1,0 +1,39 @@
+{
+  "replace": false,
+
+  "values": {
+    "minecraft:rotten_flesh": {
+      "chance": 0.3
+    },
+    "minecraft:spider_eye": {
+      "chance": 0.3
+    },
+    "minecraft:fermented_spider_eye": {
+      "chance": 0.3
+    },
+    "minecraft:poisonous_potato": {
+      "chance": 0.3
+    },
+    "minecraft:rabbit_foot": {
+      "chance": 0.65
+    },
+    "minecraft:turtle_egg": {
+      "chance": 0.85
+    },
+    "minecraft:sniffer_egg": {
+      "chance": 0.9
+    },
+    "minecraft:sculk_vein": {
+      "chance": 0.65
+    },
+    "minecraft:glistering_melon_slice": {
+      "chance": 0.9
+    },
+    "minecraft:golden_apple": {
+      "chance": 1.0
+    },
+    "minecraft:golden_carrot": {
+      "chance": 1.0
+    }
+  }
+}
