@@ -8,7 +8,7 @@ import xxrexraptorxx.upcycle.utils.Config;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
- * @projectPage https://www.curseforge.com/minecraft/mc-mods/upcycle
+ * @projectPage <a href="https://www.curseforge.com/minecraft/mc-mods/upcycle">...</a>
  **/
 @Mod(References.MODID)
 public class Upcycle {

@@ -7,6 +7,15 @@ plugins {
 }
 
 
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        if (details.requested.group == 'org.ow2.asm') {
+            details.useVersion '9.7'
+        }
+    }
+}
+
+
 base {
     archivesName = mod_id
 }
@@ -117,13 +126,14 @@ repositories {
 
 dependencies {
 
-    implementation "net.neoforged:neoforge:${forge_version}"
+    implementation("net.neoforged:neoforge:${forge_version}")
     //JEI
-    compileOnly("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
-    compileOnly("mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}")
-    runtimeOnly("mezz.jei:jei-${mc_version}-neoforge:${jei_version}")
+    //compileOnly("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
+    //compileOnly("mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}")
+    //runtimeOnly("mezz.jei:jei-${mc_version}-neoforge:${jei_version}")
     //JADE
     runtimeOnly("curse.maven:jade-324717:${jade_version}")
+
 
 }
 
