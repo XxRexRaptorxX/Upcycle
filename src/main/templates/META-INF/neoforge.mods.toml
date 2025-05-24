@@ -15,6 +15,8 @@ logoFile="logo.png"
 authors="${mod_authors}"
 description='''This mod allows you to upcycle trash like rotten flesh and spider eyes in the composter to bone meal!'''
 
+[modproperties.${mod_id}]
+configuredBackground="minecraft:textures/block/composter_side.png"
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
@@ -30,5 +32,14 @@ mandatory=true
 type="required"
 versionRange="${minecraft_version_range}"
 ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="magmacore"
+referralUrl="https://www.curseforge.com/minecraft/mc-mods/magma-core"
+reason="Provides basic code and features such as update-checker"
+type="required"
+versionRange="${magmacore_version_range}"
+ordering="AFTER"
 side="BOTH"
 
